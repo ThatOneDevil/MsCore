@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class Database {
 
-    private final String HOST = "sql4.freesqldatabase.com";
+    private final String HOST = "[For privacy reason this is removed]";
     private final int PORT = 3306;
-    private final String DATABASE = "sql4467828";
-    private final String USERNAME = "sql4467828";
-    private final String PASSWORD = "P91b5swTQ2";
+    private final String DATABASE = "[For privacy reason this is removed]";
+    private final String USERNAME = "[For privacy reason this is removed]";
+    private final String PASSWORD = "[For privacy reason this is removed]";
 
 
     private Connection connection;
