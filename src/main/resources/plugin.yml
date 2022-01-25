@@ -1,0 +1,15 @@
+name: MsCore
+version: '${project.version}'
+main: me.thatonedevil.mscore.MsCore
+authors: [ ThatOneDevil ]
+description: Pugin for Mellow's Modded smp
+commands:
+  getPlayerData:
+    description: Gets player data from sql Database
+    permission: Mscore.getPlayerData
+  setPlayerData:
+    description: sets player data
+    permission: Mscore.setPlayerData
+  resetPlayerData:
+    description: resets player data
+    permission: Mscore.resetPlayerData
