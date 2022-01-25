@@ -13,3 +13,6 @@ commands:
   resetPlayerData:
     description: resets player data
     permission: Mscore.resetPlayerData
+  RevivePlayer:
+    description: revives a  player
+    permission: Mscore.resetPlayerData

@@ -37,9 +37,6 @@ public class LivesDeath implements Listener {
                         break;
                     case 1:
                         playerData.setLives(0);
-                        player.sendTitle(format("&c&l☠ You died"), format("&cYou are on your &4last&c life"));
-                        break;
-                    case 0:
                         playerData.setDeadValue("DEAD");
                         player.sendTitle(format("&c&l☠ You died"), null);
                         player.sendMessage(" ");
@@ -47,9 +44,10 @@ public class LivesDeath implements Listener {
                         player.sendMessage(" ");
                         player.setGameMode(GameMode.ADVENTURE);
                         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
-                        Bukkit.dispatchCommand(console, "/god" + player.getDisplayName());
-                        Bukkit.dispatchCommand(console, "/vanish" + player.getDisplayName());
+                        Bukkit.dispatchCommand(console, "god " + player.getName());
+                        Bukkit.dispatchCommand(console, "vanish " + player.getName());
                         break;
+
                 }
 
             }

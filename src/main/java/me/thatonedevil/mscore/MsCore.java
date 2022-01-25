@@ -2,6 +2,7 @@ package me.thatonedevil.mscore;
 
 import me.thatonedevil.mscore.Commands.DeletePlayerData;
 import me.thatonedevil.mscore.Commands.GetPlayerData;
+import me.thatonedevil.mscore.Commands.RevivePlayer;
 import me.thatonedevil.mscore.Commands.SetPlayerData;
 import me.thatonedevil.mscore.DataManager.Database;
 import me.thatonedevil.mscore.DataManager.PlayerManager;
@@ -38,6 +39,7 @@ public final class MsCore extends JavaPlugin {
         getCommand("getPlayerData").setExecutor(new GetPlayerData(this));
         getCommand("setPlayerData").setExecutor(new SetPlayerData(this));
         getCommand("resetPlayerData").setExecutor(new DeletePlayerData(this));
+        getCommand("revivePlayer").setExecutor(new RevivePlayer(this));
     }
     @Override
     public void onDisable() {

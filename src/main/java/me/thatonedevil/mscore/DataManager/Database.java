@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class Database {
 
-    private final String HOST = "[For privacy reason this is removed]";
+    private final String HOST = "[Private]";
     private final int PORT = 3306;
-    private final String DATABASE = "[For privacy reason this is removed]";
-    private final String USERNAME = "[For privacy reason this is removed]";
-    private final String PASSWORD = "[For privacy reason this is removed]";
+    private final String DATABASE = "[Private]";
+    private final String USERNAME = "[Private]";
+    private final String PASSWORD = "[Private]";
 
 
     private Connection connection;
