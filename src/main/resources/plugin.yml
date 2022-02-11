@@ -7,12 +7,24 @@ commands:
   getPlayerData:
     description: Gets player data from sql Database
     permission: Mscore.getPlayerData
+    permission-message: No
   setPlayerData:
     description: sets player data
     permission: Mscore.setPlayerData
+    permission-message: No
   resetPlayerData:
     description: resets player data
     permission: Mscore.resetPlayerData
+    permission-message: No
   RevivePlayer:
     description: revives a  player
     permission: Mscore.resetPlayerData
+    permission-message: No
+  msCoreVanish:
+    description: Vanish
+    permission: Mscore.vanish
+    permission-message: No
+  ResetAllData:
+    description: Resets all data can only be run by console
+    permission: Mscore.resetAllData
+    permission-message: No

@@ -1,9 +1,6 @@
 package me.thatonedevil.mscore;
 
-import me.thatonedevil.mscore.Commands.DeletePlayerData;
-import me.thatonedevil.mscore.Commands.GetPlayerData;
-import me.thatonedevil.mscore.Commands.RevivePlayer;
-import me.thatonedevil.mscore.Commands.SetPlayerData;
+import me.thatonedevil.mscore.Commands.*;
 import me.thatonedevil.mscore.DataManager.Database;
 import me.thatonedevil.mscore.DataManager.PlayerManager;
 import me.thatonedevil.mscore.Events.ConnectionListener;
@@ -36,10 +33,13 @@ public final class MsCore extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new ConnectionListener(this), this);
         Bukkit.getPluginManager().registerEvents(new LivesDeath(this), this);
         Bukkit.getPluginManager().registerEvents(new ItemPickup(this), this);
+
         getCommand("getPlayerData").setExecutor(new GetPlayerData(this));
         getCommand("setPlayerData").setExecutor(new SetPlayerData(this));
         getCommand("resetPlayerData").setExecutor(new DeletePlayerData(this));
         getCommand("revivePlayer").setExecutor(new RevivePlayer(this));
+        getCommand("msCoreVanish").setExecutor(new Vanish());
+        getCommand("ResetAllData").setExecutor(new ResetAllData(this));
     }
     @Override
     public void onDisable() {

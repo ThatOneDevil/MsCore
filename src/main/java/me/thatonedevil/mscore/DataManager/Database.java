@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class Database {
 
-    private final String HOST = "[PRIVATE]";
+    private final String HOST = "";
     private final int PORT = 3306;
-    private final String DATABASE = "[PRIVATE]";
-    private final String USERNAME = "[PRIVATE]";
-    private final String PASSWORD = "[PRIVATE]";
+    private final String DATABASE = "";
+    private final String USERNAME = "";
+    private final String PASSWORD = "";
 
 
     private Connection connection;
