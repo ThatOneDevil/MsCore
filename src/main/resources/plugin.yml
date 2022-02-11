@@ -6,25 +6,25 @@ description: Pugin for Mellow's Modded smp
 commands:
   getPlayerData:
     description: Gets player data from sql Database
-    permission: Mscore.getPlayerData
+    permission: Mscore.admin
     permission-message: No
   setPlayerData:
     description: sets player data
-    permission: Mscore.setPlayerData
+    permission: Mscore.admin
     permission-message: No
   resetPlayerData:
     description: resets player data
-    permission: Mscore.resetPlayerData
+    permission: Mscore.admin
     permission-message: No
   RevivePlayer:
     description: revives a  player
-    permission: Mscore.resetPlayerData
+    permission: Mscore.admin
     permission-message: No
   msCoreVanish:
     description: Vanish
-    permission: Mscore.vanish
+    permission: Mscore.admin
     permission-message: No
   ResetAllData:
     description: Resets all data can only be run by console
-    permission: Mscore.resetAllData
+    permission: Mscore.admin
     permission-message: No
