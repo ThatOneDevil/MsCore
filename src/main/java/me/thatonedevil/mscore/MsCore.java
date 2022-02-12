@@ -28,7 +28,7 @@ public final class MsCore extends JavaPlugin {
             e.printStackTrace();
         }
 
-        System.out.println("Database Connected: " + database.isConnected());
+        System.out.println("Database connection: " + database.isConnected() + " This is a good thing!");
 
         Bukkit.getPluginManager().registerEvents(new ConnectionListener(this), this);
         Bukkit.getPluginManager().registerEvents(new LivesDeath(this), this);
