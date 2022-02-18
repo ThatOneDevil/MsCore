@@ -59,7 +59,6 @@ public class CustomPlayer {
         }
     }
 
-
     public void deletePlayerData(UUID uuid) {
         this.uuid = uuid;
         try {
@@ -74,6 +73,7 @@ public class CustomPlayer {
 
     public int getLives() { return lives; }
     public String getDeadValue() { return dead; }
+    public UUID getUuid() { return uuid; }
 
 
 }

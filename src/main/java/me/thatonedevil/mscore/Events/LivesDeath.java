@@ -33,7 +33,7 @@ public class LivesDeath implements Listener {
                 switch (lives) {
                     case 2:
                         playerData.setLives(1);
-                        player.sendTitle(format("&c&l☠ You died"), format("&cYou now have &41&c life left!"));
+                        player.sendTitle(format("&c&l☠ You died"), format("&cYou now have &41 &clife left!"));
                         break;
                     case 1:
                         playerData.setLives(0);
@@ -47,7 +47,6 @@ public class LivesDeath implements Listener {
                         Bukkit.dispatchCommand(console, "god " + player.getName());
                         Bukkit.dispatchCommand(console, "vanish " + player.getName());
                         break;
-
                 }
 
             }

@@ -31,7 +31,6 @@ public class DeletePlayerData implements CommandExecutor {
                     Player target = Bukkit.getPlayer(args[0]);
                     try {
                         CustomPlayer playerData = new CustomPlayer(main, target.getUniqueId());
-                        PlayerManager playerManager = new PlayerManager();
                         playerData.deletePlayerData(target.getUniqueId());
                         player.sendMessage(format("&cDeleted &6" + target.getDisplayName() + "&c's Data!"));
                     } catch (SQLException e) {

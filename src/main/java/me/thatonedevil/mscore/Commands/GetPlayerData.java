@@ -12,8 +12,7 @@ import org.bukkit.entity.Player;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-
-import static me.thatonedevil.mscore.MsCore.format;
+import java.util.UUID;
 
 public class GetPlayerData implements CommandExecutor {
 
@@ -35,8 +34,9 @@ public class GetPlayerData implements CommandExecutor {
                         CustomPlayer playerData = new CustomPlayer(main, target.getUniqueId());
                         String dead = playerData.getDeadValue();
                         int lives = playerData.getLives();
+                        UUID uuid = playerData.getUuid();
 
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Data of " + target.getDisplayName() + "\n  &cLives " + lives + "\n  Dead: " + dead));
+                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Data of " + target.getDisplayName() +  "\n &cUUID: " + uuid + "\n  &cLives " + lives + "\n  &cDead: " + dead));
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
