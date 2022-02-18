@@ -6,11 +6,11 @@ import java.sql.SQLException;
 
 public class Database {
 
-    private final String HOST = "";
-    private final int PORT = 0;
-    private final String DATABASE = "";
-    private final String USERNAME = "";
-    private final String PASSWORD = "";
+    private final String HOST = "free-tier13.aws-eu-central-1.cockroachlabs.cloud";
+    private final int PORT = 26257;
+    private final String DATABASE = "testdb-280.defaultdb";
+    private final String USERNAME = "thatonedevil";
+    private final String PASSWORD = "C7E1bc9fcV0Opygw6LZwow";
 
 
     private Connection connection;
