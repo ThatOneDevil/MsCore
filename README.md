@@ -2,4 +2,6 @@
 
 ## For more information about this plugin, please just watch this video
 
-https://www.youtube.com/watch?v=p7UF8i_IW60
+
+[![Watch the video](https://img.youtube.com/vi/p7UF8i_IW60/maxresdefault.jpg)](https://www.youtube.com/watch?v=p7UF8i_IW60)
+
