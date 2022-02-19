@@ -1,11 +1,11 @@
 package me.thatonedevil.mscore;
 
-import me.thatonedevil.mscore.Commands.*;
-import me.thatonedevil.mscore.DataManager.Database;
-import me.thatonedevil.mscore.DataManager.PlayerManager;
-import me.thatonedevil.mscore.Events.ConnectionListener;
-import me.thatonedevil.mscore.Events.ItemPickup;
-import me.thatonedevil.mscore.Events.LivesDeath;
+import me.thatonedevil.mscore.commands.*;
+import me.thatonedevil.mscore.dataManager.Database;
+import me.thatonedevil.mscore.dataManager.PlayerManager;
+import me.thatonedevil.mscore.events.ConnectionListener;
+import me.thatonedevil.mscore.events.ItemPickup;
+import me.thatonedevil.mscore.events.LivesDeath;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,15 +20,29 @@ public final class MsCore extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        database = new Database();
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
+        Database Database = new Database(this);
+
+        database = new Database(this);
         playerManager = new PlayerManager();
+
         try {
             database.connect();
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Database connection: " + database.isConnected() + " This is a good thing!");
+        System.out.println();
+        System.out.println("-----------------");
+        if (database.isConnected()) {
+            System.out.println("Database connection: " + database.isConnected() + " This is a good thing!");
+        } else {
+            System.out.println("Database connection: " + database.isConnected() + " This is a bad thing!");
+        }
+        System.out.println();
+        System.out.println("-----------------");
 
         Bukkit.getPluginManager().registerEvents(new ConnectionListener(this), this);
         Bukkit.getPluginManager().registerEvents(new LivesDeath(this), this);

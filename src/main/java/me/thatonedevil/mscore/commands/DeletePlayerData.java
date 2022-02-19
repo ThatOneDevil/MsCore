@@ -1,24 +1,22 @@
-package me.thatonedevil.mscore.Commands;
+package me.thatonedevil.mscore.commands;
 
-import me.thatonedevil.mscore.DataManager.CustomPlayer;
-import me.thatonedevil.mscore.DataManager.PlayerManager;
+import me.thatonedevil.mscore.dataManager.CustomPlayer;
 import me.thatonedevil.mscore.MsCore;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.UUID;
 
-public class GetPlayerData implements CommandExecutor {
+import static me.thatonedevil.mscore.MsCore.format;
+
+public class DeletePlayerData implements CommandExecutor {
 
     private MsCore main;
 
-    public GetPlayerData(MsCore main) {
+    public DeletePlayerData(MsCore main) {
         this.main = main;
     }
 
@@ -32,18 +30,14 @@ public class GetPlayerData implements CommandExecutor {
                     Player target = Bukkit.getPlayer(args[0]);
                     try {
                         CustomPlayer playerData = new CustomPlayer(main, target.getUniqueId());
-                        String dead = playerData.getDeadValue();
-                        int lives = playerData.getLives();
-                        UUID uuid = playerData.getUuid();
-
-                        player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&6Data of " + target.getDisplayName() +  "\n &cUUID: " + uuid + "\n  &cLives " + lives + "\n  &cDead: " + dead));
+                        playerData.deletePlayerData(target.getUniqueId());
+                        player.sendMessage(format("&cDeleted &6" + target.getDisplayName() + "&c's Data!"));
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-
                 }
+
             }
-            return false;
         }
         return false;
     }

@@ -1,7 +1,7 @@
-package me.thatonedevil.mscore.Commands;
+package me.thatonedevil.mscore.commands;
 
-import me.thatonedevil.mscore.DataManager.CustomPlayer;
-import me.thatonedevil.mscore.DataManager.PlayerManager;
+import me.thatonedevil.mscore.dataManager.CustomPlayer;
+import me.thatonedevil.mscore.dataManager.PlayerManager;
 import me.thatonedevil.mscore.MsCore;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
@@ -11,8 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import static me.thatonedevil.mscore.MsCore.format;

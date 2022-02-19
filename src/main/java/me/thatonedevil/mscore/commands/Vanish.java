@@ -1,4 +1,4 @@
-package me.thatonedevil.mscore.Commands;
+package me.thatonedevil.mscore.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;

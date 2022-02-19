@@ -1,4 +1,4 @@
-package me.thatonedevil.mscore.DataManager;
+package me.thatonedevil.mscore.dataManager;
 
 
 import java.util.HashMap;

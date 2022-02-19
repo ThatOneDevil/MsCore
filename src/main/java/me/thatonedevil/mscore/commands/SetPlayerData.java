@@ -1,6 +1,6 @@
-package me.thatonedevil.mscore.Commands;
+package me.thatonedevil.mscore.commands;
 
-import me.thatonedevil.mscore.DataManager.CustomPlayer;
+import me.thatonedevil.mscore.dataManager.CustomPlayer;
 import me.thatonedevil.mscore.MsCore;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -47,7 +47,7 @@ public class SetPlayerData implements CommandExecutor {
                     }
 
                 } else {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/setplayer data [player] [dead, lives] [dead: True/False, Lives: Integer]"));
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/setplayerdata [player] [dead, lives] [dead: True/False, Lives: Integer]"));
                 }
             }
             return false;

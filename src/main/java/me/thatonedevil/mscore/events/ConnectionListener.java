@@ -1,6 +1,6 @@
-package me.thatonedevil.mscore.Events;
+package me.thatonedevil.mscore.events;
 
-import me.thatonedevil.mscore.DataManager.CustomPlayer;
+import me.thatonedevil.mscore.dataManager.CustomPlayer;
 import me.thatonedevil.mscore.MsCore;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

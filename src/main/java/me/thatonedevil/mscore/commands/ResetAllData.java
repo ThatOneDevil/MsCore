@@ -1,4 +1,4 @@
-package me.thatonedevil.mscore.Commands;
+package me.thatonedevil.mscore.commands;
 
 import me.thatonedevil.mscore.MsCore;
 import org.bukkit.ChatColor;
