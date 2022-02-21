@@ -16,15 +16,15 @@ commands:
     description: resets player data
     permission: Mscore.admin
     permission-message: No
-  RevivePlayer:
+  revivePlayer:
     description: revives a  player
     permission: Mscore.admin
     permission-message: No
-  msCoreVanish:
+  msVanish:
     description: Vanish
     permission: Mscore.admin
     permission-message: No
-  ResetAllData:
+  resetAllData:
     description: Resets all data can only be run by console
     permission: Mscore.admin
     permission-message: No

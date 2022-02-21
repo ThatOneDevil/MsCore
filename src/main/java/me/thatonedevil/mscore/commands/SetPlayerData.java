@@ -49,8 +49,10 @@ public class SetPlayerData implements CommandExecutor {
                 } else {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/setplayerdata [player] [dead, lives] [dead: True/False, Lives: Integer]"));
                 }
+            } else {
+                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&c/setplayerdata [player] [dead, lives] [dead: True/False, Lives: Integer]"));
+
             }
-            return false;
         }
         return false;
     }

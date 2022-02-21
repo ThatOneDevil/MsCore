@@ -45,7 +45,7 @@ public class LivesDeath implements Listener {
                         player.setGameMode(GameMode.ADVENTURE);
                         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
                         Bukkit.dispatchCommand(console, "god " + player.getName());
-                        Bukkit.dispatchCommand(console, "vanish " + player.getName());
+                        Bukkit.dispatchCommand(console, "msVanish " + player.getName());
                         break;
                 }
 

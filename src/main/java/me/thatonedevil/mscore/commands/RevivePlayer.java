@@ -35,12 +35,12 @@ public class RevivePlayer implements CommandExecutor {
                     playerManagerPlayer.getCustomPlayer(target.getUniqueId());
                     try {
                         CustomPlayer playerData = new CustomPlayer(main, target.getUniqueId());
-                        playerData.setLives(3);
+                        playerData.setLives(2);
                         playerData.setDeadValue("ALIVE");
                         target.setGameMode(GameMode.SURVIVAL);
                         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
                         Bukkit.dispatchCommand(console, "god " + target.getName());
-                        Bukkit.dispatchCommand(console, "vanish " + target.getName());
+                        Bukkit.dispatchCommand(console, "msVanish " + target.getName());
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }

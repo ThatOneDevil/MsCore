@@ -1,6 +1,7 @@
 package me.thatonedevil.mscore.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -17,28 +18,25 @@ public class Vanish implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        if (args.length == 3) {
+        if (args.length == 2) {
             if (Bukkit.getPlayer(args[0]) != null) {
                 Player target = Bukkit.getPlayer(args[0]);
-
                 if (vanished.contains(target.getUniqueId())) {
                     vanished.remove(target.getUniqueId());
                     for (Player targetPlayer : Bukkit.getOnlinePlayers()) {
                         targetPlayer.showPlayer(targetPlayer);
                     }
-                    target.sendMessage("You are now unvanished");
+                    target.sendMessage(ChatColor.RED + "You are now unvanished");
 
                 } else {
                     vanished.add(target.getUniqueId());
                     for (Player targetPlayer : Bukkit.getOnlinePlayers()) {
                         targetPlayer.hidePlayer(targetPlayer);
                     }
-                    target.sendMessage("You are not vanished");
+                    target.sendMessage(ChatColor.RED + "You are now vanished");
                 }
             }
         }
-
-
         return false;
     }
 }

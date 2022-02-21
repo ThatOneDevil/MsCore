@@ -26,7 +26,7 @@ public class GetPlayerData implements CommandExecutor {
             Player player = (Player) sender;
 
             if (args.length == 1) {
-                if (Bukkit.getPlayer(args[0]) != null) {
+                if (Bukkit.getPlayer(args[0])  != null) {
                     Player target = Bukkit.getPlayer(args[0]);
                     try {
                         CustomPlayer playerData = new CustomPlayer(main, target.getUniqueId());

@@ -52,7 +52,7 @@ public final class MsCore extends JavaPlugin {
         getCommand("setPlayerData").setExecutor(new SetPlayerData(this));
         getCommand("resetPlayerData").setExecutor(new DeletePlayerData(this));
         getCommand("revivePlayer").setExecutor(new RevivePlayer(this));
-        getCommand("msCoreVanish").setExecutor(new Vanish());
+        getCommand("msVanish").setExecutor(new Vanish());
         getCommand("ResetAllData").setExecutor(new ResetAllData(this));
     }
     @Override
