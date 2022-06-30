@@ -40,7 +40,7 @@ public class LivesDeath implements Listener {
                         playerData.setDeadValue("DEAD");
                         player.sendTitle(format("&c&l☠ You died"), null);
                         player.sendMessage(" ");
-                        player.sendMessage(format("&cUnfortunately you cannot participate, if you are a faction leader please transfer your ownership!"));
+                        player.sendMessage(format("&cUnfortunately you cannot participate, if you are a faction leader please transfer your ownership."));
                         player.sendMessage(" ");
                         player.setGameMode(GameMode.ADVENTURE);
                         ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
